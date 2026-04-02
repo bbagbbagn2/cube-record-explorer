@@ -1,20 +1,20 @@
 export const records = [
   {
-    year: 2018,
-    athlete: "Yusheng Du",
-    time: 3.47,
-    scramble: "R2 F R U R' U' F'",
+    year: 2010,
+    time: 6.77,
+    athlete: "Feliks Zemdegs",
+    scramble: "R U R' U R U2 R'",
   },
   {
     year: 2015,
-    athlete: "Collin Burns",
     time: 4.74,
+    athlete: "Collin Burns",
     scramble: "F R U R' U' F'",
   },
   {
-    year: 2010,
-    athlete: "Feliks Zemdegs",
-    time: 6.77,
-    scramble: "R U R' U R U2 R'",
+    year: 2018,
+    time: 3.47,
+    athlete: "Yusheng Du",
+    scramble: "R2 F R U R' U' F'",
   },
 ];
