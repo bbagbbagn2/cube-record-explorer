@@ -9,13 +9,17 @@ import {
   Area,
   ResponsiveContainer,
 } from "recharts";
-import { records } from "@/data/records";
+import { WORLD_RECORDS } from "@/data/records";
 
 export default function RecordTimeline() {
+  const data = [...WORLD_RECORDS]
+    .sort((a, b) => a.year - b.year)
+    .map((r) => ({ year: r.year, time: r.time, athlete: r.athlete }));
+
   return (
     <div className="w-full h-75 mt-8">
       <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={records}>
+        <AreaChart data={data}>
           <defs>
             <linearGradient id="colorTime" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#ef4444" stopOpacity={0.3} />
