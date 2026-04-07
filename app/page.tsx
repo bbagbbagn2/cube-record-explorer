@@ -29,8 +29,8 @@ export default function Home() {
               THE LIMITS OF <span className="text-red-500 italic">SPEED.</span>
             </h1>
             <p className="text-xl text-neutral-400 leading-relaxed mb-10 max-w-xl">
-              2003년 22.95초에서 현재 3.13초. 데이터와 3D 시각화 자료를 통해
-              World Cube Association의 기록을 살펴보세요.
+              2003년 22.95초에서 현재 {latestRecord.time}초. 데이터와 3D 시각화
+              자료를 통해 World Cube Association의 기록을 살펴보세요.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -73,7 +73,9 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-neutral-900 rounded-xl border border-neutral-800">
-                  <div className="text-3xl font-bold text-white">3.13s</div>
+                  <div className="text-3xl font-bold text-white">
+                    {latestRecord.time}
+                  </div>
                   <div className="text-xs text-neutral-500 uppercase font-bold mt-1">
                     최근 기록
                   </div>
@@ -93,7 +95,7 @@ export default function Home() {
                   World Record Timeline (Seconds)
                 </h3>
                 <div className="text-xs text-neutral-500 font-mono">
-                  2003 - 2023
+                  2003 - {latestRecord.year}
                 </div>
               </div>
               <RecordTimeline />
